@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import  {delete_cookie } from 'sfcookies'
 import useAuth from "../hooks/useAuth" 
 function Logout() {
+   // useref //
          const  {islogin,setIsLogin}= useAuth()
-              const nav = useNavigate();
+              let nav = useNavigate();
     useEffect(()=>{
         setIsLogin(false)  
         delete_cookie("islogin")
