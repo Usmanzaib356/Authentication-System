@@ -8,10 +8,9 @@ const AuthContextProvider = ({ children }) => {
     
   const [auth, setAuth] = useState("This is coming from Context JS");
   const [islogin,setIsLogin] = useState(false)
-  // const API_URL = "http://127.0.0.1:5000" 
+   
+ const API_URL = `https://comfortable-gold-belt.cyclic.app`
 
-  const API_URL = "https://comfortable-gold-belt.cyclic.app"
-  
    useEffect(()=>{
     setIsLogin(true)
     read_cookie("islogin")

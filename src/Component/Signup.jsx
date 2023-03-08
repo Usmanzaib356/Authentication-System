@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react'
 import useAuth from "../hooks/useAuth"
 import { useNavigate } from 'react-router-dom'; 
 import { Link } from 'react-router-dom';
+import { bake_cookie } from 'sfcookies';
 function Signup() {
     // useState //
     const {auth, setAuth,API_URL,islogin,setIsLogin} = useAuth();
@@ -34,6 +35,7 @@ function Signup() {
             setLoading(false)
             console.log(res)
             setIsLogin(true)
+            bake_cookie("islogin",true)
             setMsg("You have signup succesfully")
             mavigate("/products")
           }
